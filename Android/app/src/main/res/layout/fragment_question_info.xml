@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="20dp"
+    android:layout_marginStart="20dp">
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:maxLines="5"
+        android:scrollbars="vertical"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        tools:text="Kolika je velicina memorije ako se zna da je u pitanju...?" />
+
+
+    <RelativeLayout
+        android:id="@+id/answers_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/send_answer_button"
+        android:layout_below="@+id/question"
+        android:layout_marginTop="30dp"
+        android:gravity="top">
+
+        <include
+            layout="@layout/fragment_default_recycler_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/input_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/send_answer_button"
+        android:layout_below="@+id/question"
+        android:gravity="top|start"
+        android:hint="@string/answer_hint"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:minHeight="80dp"
+        android:padding="5dp"
+        android:scrollHorizontally="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:theme="@style/editTextStyle" />
+
+    <Button
+        android:id="@+id/send_answer_button"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_primary_radius_2dp"
+        android:gravity="center"
+        android:text="@string/send_answer_message"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</RelativeLayout>

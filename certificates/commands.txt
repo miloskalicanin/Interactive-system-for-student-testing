@@ -1,0 +1,13 @@
+openssl ecparam -out ca-key.key -name prime256v1 -genkey
+
+openssl req -x509 -new -nodes -key ca-key.key -sha512 -days 1024 -out ca-key.crt
+
+openssl x509 -in ca-key.crt -text -noout
+
+openssl ecparam -out mqtt-crt.key -name prime256v1 -genkey
+
+openssl req -new -key mqtt-crt.key -out mqtt-crt.csr
+
+openssl x509 -req -in mqtt-crt.csr -CA ca-key.crt -CAkey ca-key.key -CAcreateserial -out mqtt-crt.crt -days 1024
+
+openssl x509 -in mqtt-crt.crt -text -noout

@@ -1,0 +1,59 @@
+# GIT Ignore
+
+# Auto generated
+*.iml
+.gradle
+/local.properties
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+
+# Gradle work directory
+/.gradle
+gradle.properties
+/local.properties
+/gradle.properties
+
+# Build output directies
+target/
+build/
+
+# IntelliJ specific files/directories
+out
+.idea
+*.ipr
+*.iws
+*.iml
+atlassian-ide-plugin.xml
+
+# Eclipse specific files/directories
+.classpath
+.project
+.settings
+.metadata
+generated-sources
+*.springBeans
+*.factorypath
+*.checkstyle
+*/src/main/java/META-INF
+*/src/main/generated/*
+bin
+
+# NetBeans specific files/directories
+.nbattrs
+
+# Miscellaneous
+*.log
+.clover
+*.orig
+*.pmd
+*.versionsBackup
+.sass-cache
+.DS_Store
+.directory
+
+*.apk

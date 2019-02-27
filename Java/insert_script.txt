@@ -1,0 +1,7 @@
+insert into predmet(naziv, sifra) values('Programiranje 1', '13E111P1');
+insert into predmet(naziv, sifra) values('Programiranje 2', '13E111P2');
+insert into predmet(naziv, sifra) values('Objektno-orijentisano programiranje 1', '13E112OO1');
+insert into predmet(naziv, sifra) values('Objektno-orijentisano programiranje 2', '13E112OO2');
+
+insert into predaje(id_prof, id_pred) values(16, 1);
+insert into predaje(id_prof, id_pred) values(16, 2);
